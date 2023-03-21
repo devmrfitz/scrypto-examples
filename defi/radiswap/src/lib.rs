@@ -198,5 +198,13 @@ mod radiswap {
                 self.b_pool.resource_address(),
             )
         }
+
+        pub fn get_pair_sizes(&self) -> (Decimal, Decimal, Decimal) {
+            (
+                self.a_pool.amount(),
+                self.b_pool.amount(),
+                self.fee
+            )
+        }
     }
 }
